@@ -14,7 +14,7 @@ def trigger_webhook():
         print(f"Failed to trigger Zap: {response.status_code}, {response.text}")
 
 # Schedule the webhook to run every 9 hours
-schedule.every(9).hours.do(trigger_webhook)
+schedule.every(5).minutes.do(trigger_webhook)
 
 print("Script running...")
 
