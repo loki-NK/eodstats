@@ -1,0 +1,23 @@
+name: Run Zap Trigger
+
+on:
+  schedule:
+    - cron: "0 */9 * * *" # Runs every 9 hours
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests schedule
+
+      - name: Run Python script
+        run: python trigger_zap.py
