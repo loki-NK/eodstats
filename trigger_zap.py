@@ -3,7 +3,7 @@ import time
 import schedule
 
 # Webhook URL from Zapier
-WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/1234567/abcde123/"
+WEBHOOK_URL = "https://webhook.site/599094f8-8b8e-482b-8a85-87da43fca73e"
 
 # Function to trigger the webhook
 def trigger_webhook():
