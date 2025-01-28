@@ -1,6 +1,4 @@
 import requests
-import time
-import schedule
 
 # Webhook URL from Zapier
 WEBHOOK_URL = "https://webhook.site/599094f8-8b8e-482b-8a85-87da43fca73e"
@@ -13,12 +11,5 @@ def trigger_webhook():
     else:
         print(f"Failed to trigger Zap: {response.status_code}, {response.text}")
 
-# Schedule the webhook to run every 9 hours
-schedule.every(1).minutes.do(trigger_webhook)
-
-print("Script running...")
-
-# Keep the script running
-while True:
-    schedule.run_pending()
-    time.sleep(60)  # Check every minute
+# Run the function directly
+trigger_webhook()
