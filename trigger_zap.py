@@ -1,7 +1,7 @@
 import requests
 
 # Webhook URL from Zapier
-WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/3316493/2f11quu/"
+WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/11394097/2fik0fg/"
 
 # Function to trigger the webhook
 def trigger_webhook():
