@@ -2,7 +2,9 @@ name: Run Zap Trigger
 
 on:
   schedule:
-    - cron: "*/10 * * * *" # Runs every 10 minutes
+    - cron: "30 7 * * *"   # Runs at 07:30 AM UTC (1:00 PM IST)
+    - cron: "30 15 * * *"  # Runs at 03:30 PM UTC (9:00 PM IST)
+    - cron: "30 23 * * *"  # Runs at 11:30 PM UTC (5:00 AM IST)
 
 jobs:
   run-script:
