@@ -23,4 +23,6 @@ jobs:
         run: pip install requests
 
       - name: Run Python script
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         run: python trigger_zap.py
